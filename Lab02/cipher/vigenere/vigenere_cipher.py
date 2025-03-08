@@ -19,10 +19,10 @@ class VigenereCipher:
                 encrypted_text += char
         return encrypted_text
 
-    def vigenere_decrypt(self, cipher_text, key):
+    def vigenere_decrypt(self, encrypt_text, key):
         decrypted_text = ""
         key_index = 0
-        for char in cipher_text:
+        for char in encrypt_text:
             if char.isalpha():
                 key_shift = ord(key[key_index % len(key)].upper()) - ord('A')
                 if char.isupper():
