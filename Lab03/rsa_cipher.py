@@ -102,7 +102,6 @@ class MyApp(QMainWindow):
             if response.status_code == 200:
                 data = response.json()
                 if (data["is_verified"]):
-                    self.ui.txt_info.setText("day la chu ky cua toi")  
                     msg = QMessageBox()
                     msg.setIcon(QMessageBox.Information)
                     msg.setText("Verified Successfully")
